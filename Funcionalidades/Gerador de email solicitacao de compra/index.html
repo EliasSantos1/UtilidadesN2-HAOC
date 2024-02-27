@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email para Solicitação de compra</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="titulo">Formulário de Solicitação</h1>
+    <form id="informacoes">
+      <div id="dados_solicitante">
+        <label for="solicitante">*Solicitante:</label>
+        <input type="text" id="solicitante" name="solicitante" required /><br />
+
+        <label for="">*Setor:</label><br />
+        <select id="setor">
+          <option value="" disabled selected>Selecione...</option>
+          <option value="Acelerador Linear - UP">Acelerador Linear - UP</option>
+          <option value="Adm. Ambulatórios - UP">Adm. Ambulatórios - UP</option>
+          <option value="Adm. Bloco Operatório - UP">
+            Adm. Bloco Operatório - UP
+          </option>
+          <option value="Adm. Bloco Operatório - UV">
+            Adm. Bloco Operatório - UV
+          </option>
+          <option value="Adm. Centro Cirúrgico e Hemodinâmica - UP">
+            Adm. Centro Cirúrgico e Hemodinâmica - UP
+          </option>
+          <option value="Adm. Externos - UP">Adm. Externos - UP</option>
+          <option value="Adm. Externos - UV">Adm. Externos - UV</option>
+          <option value="Adm. Restaurantes - UP">Adm. Restaurantes - UP</option>
+          <option value="Administração da Cardiologia Não Invasiva - UP">
+            Administração da Cardiologia Não Invasiva - UP
+          </option>
+          <option value="Administração da Hospitalidade - UP">
+            Administração da Hospitalidade - UP
+          </option>
+          <option value="Administração da Neurofisiologia - UP">
+            Administração da Neurofisiologia - UP
+          </option>
+          <option value="Administração da Oncologia - UP">
+            Administração da Oncologia - UP
+          </option>
+          <option value="Administração de Marketing">
+            Administração de Marketing
+          </option>
+          <option value="Administração do CDI - UP">
+            Administração do CDI - UP
+          </option>
+          <option value="Administração do SADT - Total - UP">
+            Administração do SADT - Total - UP
+          </option>
+          <option value="Administração Suprimentos">
+            Administração Suprimentos
+          </option>
+          <option value="Administração/Gerência de Enfermagem - UP">
+            Administração/Gerência de Enfermagem - UP
+          </option>
+          <option value="Administrativo CDI - UV">
+            Administrativo CDI - UV
+          </option>
+          <option value="Administrativo CEP">Administrativo CEP</option>
+          <option value="Administrativo IPE">Administrativo IPE</option>
+          <option value="Agendamento e Autorização de Cirurgia - UV">
+            Agendamento e Autorização de Cirurgia - UV
+          </option>
+          <option value="Agendamento e Autorização de Cirurgias">
+            Agendamento e Autorização de Cirurgias
+          </option>
+          <option value="Almoxarifado - UP">Almoxarifado - UP</option>
+          <option value="Almoxarifado - UV">Almoxarifado - UV</option>
+          <option value="Ambulatório - Colaborador">
+            Ambulatório - Colaborador
+          </option>
+          <option value="Analistas de Negócios">Analistas de Negócios</option>
+          <option value="Anfiteatro - Bloco E - UP">
+            Anfiteatro - Bloco E - UP
+          </option>
+          <option value="Apoio Assistencial - UP">
+            Apoio Assistencial - UP
+          </option>
+          <option value="Área de Lazer">Área de Lazer</option>
+          <option value="Atenção Básica">Atenção Básica</option>
+          <option value="Atenção Primária em Saúde - (APS)">
+            Atenção Primária em Saúde - (APS)
+          </option>
+          <option value="Atendimento Integrado - UP">
+            Atendimento Integrado - UP
+          </option>
+          <option value="Atendimento Integrado - UV">
+            Atendimento Integrado - UV
+          </option>
+          <option value="Atlas">Atlas</option>
+          <option value="Auditoria de Contas Médicas">
+            Auditoria de Contas Médicas
+          </option>
+          <option value="Auditoria de Prontuário">
+            Auditoria de Prontuário
+          </option>
+          <option value="Auditoria Interna Corporativa">
+            Auditoria Interna Corporativa
+          </option>
+          <option value="Avaliação e Padronização">
+            Avaliação e Padronização
+          </option>
+          <option value="Banco de Sangue - UP">Banco de Sangue - UP</option>
+          <option value="Banco de Sangue - UV">Banco de Sangue - UV</option>
+          <option value="Biobanco">Biobanco</option>
+          <option value="Cadáver Lab Treinamento Cirúrgico">
+            Cadáver Lab Treinamento Cirúrgico
+          </option>
+          <option value="Call Center">Call Center</option>
+          <option value="Campo Belo Adm.">Campo Belo Adm.</option>
+          <option value="Capacitação em Pesquisa Clínica">
+            Capacitação em Pesquisa Clínica
+          </option>
+          <option value="Central de Autorização">Central de Autorização</option>
+          <option value="Central de Diluição">Central de Diluição</option>
+          <option value="Central de Materiais - UP">
+            Central de Materiais - UP
+          </option>
+          <option value="Central de Materiais - UV">
+            Central de Materiais - UV
+          </option>
+          <option value="Central de Serviços">Central de Serviços</option>
+          <option value="Central de Transporte - UP">
+            Central de Transporte - UP
+          </option>
+          <option value="Central de Transporte - UV">
+            Central de Transporte - UV
+          </option>
+          <option value="Centro Cirúrgico - UP">Centro Cirúrgico - UP</option>
+          <option value="Centro Cirúrgico - UV">Centro Cirúrgico - UV</option>
+          <option value="Centro de Endoscopia - Campo Belo">
+            Centro de Endoscopia - Campo Belo
+          </option>
+          <option value="Centro de Endoscopia - UP">
+            Centro de Endoscopia - UP
+          </option>
+          <option value="Centro de Endoscopia - UV">
+            Centro de Endoscopia - UV
+          </option>
+          <option value="Centro de Especialidades - Bloco B - UP">
+            Centro de Especialidades - Bloco B - UP
+          </option>
+          <option value="Centro de Especialidades Cirúrgicas  - Bloco A - UP">
+            Centro de Especialidades Cirúrgicas - Bloco A - UP
+          </option>
+          <option value="Centro de Infusão - UV">Centro de Infusão - UV</option>
+          <option value="Centro de Obesidade e Diabetes - HM - UP">
+            Centro de Obesidade e Diabetes - HM - UP
+          </option>
+          <option value="Centro de Obesidade e Diabetes - UP">
+            Centro de Obesidade e Diabetes - UP
+          </option>
+          <option value="Centro de Obesidade e Diabetes - UV">
+            Centro de Obesidade e Diabetes - UV
+          </option>
+          <option value="Centro de Simulação HAOC">
+            Centro de Simulação HAOC
+          </option>
+          <option value="Centro Especializado em Aparelho Digestivo - UP">
+            Centro Especializado em Aparelho Digestivo - UP
+          </option>
+          <option value="Centro Internacional de Pesquisa">
+            Centro Internacional de Pesquisa
+          </option>
+          <option value="Check Up Campo Belo">Check Up Campo Belo</option>
+          <option value="Ciclo de Receita">Ciclo de Receita</option>
+          <option value="Ciências de Dados - Cursos">
+            Ciências de Dados - Cursos
+          </option>
+          <option value="CIM">CIM</option>
+          <option value="CIMAD Centro de Inv. de Motil.Apar.Dig - UP">
+            CIMAD Centro de Inv. de Motil.Apar.Dig - UP
+          </option>
+          <option value="Cobrança">Cobrança</option>
+          <option value="Combate a Incêndio - UV">
+            Combate a Incêndio - UV
+          </option>
+          <option value="Compras">Compras</option>
+          <option value="Comunicação Interna">Comunicação Interna</option>
+          <option value="Condomínio / Resultado Mooca">
+            Condomínio / Resultado Mooca
+          </option>
+          <option value="Condomínio - Unidade Matriz - UP">
+            Condomínio - Unidade Matriz - UP
+          </option>
+          <option value="Condomínio - UV">Condomínio - UV</option>
+          <option value="Condomínio Bloco A - UP">
+            Condomínio Bloco A - UP
+          </option>
+          <option value="Condomínio Bloco E  - UP">
+            Condomínio Bloco E - UP
+          </option>
+          <option
+            value="Condomínio Ed. Ambulatorial Vergueiro - (Somente Aluguel)"
+          >
+            Condomínio Ed. Ambulatorial Vergueiro - (Somente Aluguel)
+          </option>
+          <option value="Consultórios - Campo Belo">
+            Consultórios - Campo Belo
+          </option>
+          <option value="Consultórios / Especialidade - UV">
+            Consultórios / Especialidade - UV
+          </option>
+          <option value="Consultórios CEU - UP">Consultórios CEU - UP</option>
+          <option value="Consultórios Oncologia - UP">
+            Consultórios Oncologia - UP
+          </option>
+          <option value="Consultórios Oncologia - UV">
+            Consultórios Oncologia - UV
+          </option>
+          <option value="Consultórios Ortopedia - Bloco A - UP">
+            Consultórios Ortopedia - Bloco A - UP
+          </option>
+          <option value="Contabilidade">Contabilidade</option>
+          <option value="Contas a Pagar">Contas a Pagar</option>
+          <option value="Contas a Receber">Contas a Receber</option>
+          <option value="Controladoria">Controladoria</option>
+          <option value="Controladoria - UV">Controladoria - UV</option>
+          <option value="Cuida APS">Cuida APS</option>
+          <option value="Cursos Técnicos">Cursos Técnicos</option>
+          <option value="CV-Genes">CV-Genes</option>
+          <option value="DATS">DATS</option>
+          <option value="Day Cirúrgico 5A2 - UV">Day Cirúrgico 5A2 - UV</option>
+          <option value="Day Clinic Cirúrgico - Campo Belo">
+            Day Clinic Cirúrgico - Campo Belo
+          </option>
+          <option value="Day Clinic Clínico - UP">
+            Day Clinic Clínico - UP
+          </option>
+          <option value="Densitometria Óssea - UP">
+            Densitometria Óssea - UP
+          </option>
+          <option value="Departamento Jurídico">Departamento Jurídico</option>
+          <option value="Desenv.Institucional / Qualidade">
+            Desenv.Institucional / Qualidade
+          </option>
+          <option value="Desenvolvimento Corporativo">
+            Desenvolvimento Corporativo
+          </option>
+          <option value="Desenvolvimento de Pessoas">
+            Desenvolvimento de Pessoas
+          </option>
+          <option value="Desenvolvimento Humano - UV">
+            Desenvolvimento Humano - UV
+          </option>
+          <option value="Desenvolvimento Organizacional">
+            Desenvolvimento Organizacional
+          </option>
+          <option value="Desfecho Clínicos e Assistenciais">
+            Desfecho Clínicos e Assistenciais
+          </option>
+          <option value="Digisus Plano de Ação">Digisus Plano de Ação</option>
+          <option value="Diretoria - Executiva Assistencial">
+            Diretoria - Executiva Assistencial
+          </option>
+          <option value="Diretoria - Executiva de Gente e Gestão">
+            Diretoria - Executiva de Gente e Gestão
+          </option>
+          <option
+            value="Diretoria - Executiva de Inovação, Pesquisa e Educação"
+          >
+            Diretoria - Executiva de Inovação, Pesquisa e Educação
+          </option>
+          <option value="Diretoria - Executiva de Operações">
+            Diretoria - Executiva de Operações
+          </option>
+          <option value="Diretoria - Executiva Médica">
+            Diretoria - Executiva Médica
+          </option>
+          <option value="Diretoria - Presidência">
+            Diretoria - Presidência
+          </option>
+          <option value="Diretoria - UV">Diretoria - UV</option>
+          <option value="Diretoria Clínica - UP">Diretoria Clínica - UP</option>
+          <option value="Diretoria Executiva de Finanças - Corporativo">
+            Diretoria Executiva de Finanças - Corporativo
+          </option>
+          <option value="Diretoria Executiva de Novos Negócios">
+            Diretoria Executiva de Novos Negócios
+          </option>
+          <option value="Diretoria Executiva de Responsabilidade Social">
+            Diretoria Executiva de Responsabilidade Social
+          </option>
+          <option value="Diretoria Paulista - UP">
+            Diretoria Paulista - UP
+          </option>
+          <option value="Diversidade Equidade e Inclusão">
+            Diversidade Equidade e Inclusão
+          </option>
+          <option value="Doppler Transcraniano - UP">
+            Doppler Transcraniano - UP
+          </option>
+          <option value="DTN">DTN</option>
+          <option value="Ecocardiografia - UP">Ecocardiografia - UP</option>
+          <option value="Ecocardiografia - UV">Ecocardiografia - UV</option>
+          <option value="Educação Continuada / Corporativa">
+            Educação Continuada / Corporativa
+          </option>
+          <option value="Educação Médica">Educação Médica</option>
+          <option value="Eletrocardiografia - UP">
+            Eletrocardiografia - UP
+          </option>
+          <option value="Eletrocardiografia - UV">
+            Eletrocardiografia - UV
+          </option>
+          <option value="Eletroencefalografia - UP">
+            Eletroencefalografia - UP
+          </option>
+          <option value="Eletroencefalograma - UV">
+            Eletroencefalograma - UV
+          </option>
+          <option value="Eletroneuromiografia - UP">
+            Eletroneuromiografia - UP
+          </option>
+          <option value="Engajamento">Engajamento</option>
+          <option value="Engenharia Clínica - Corporativo">
+            Engenharia Clínica - Corporativo
+          </option>
+          <option value="Engenharia Clínica - UP">
+            Engenharia Clínica - UP
+          </option>
+          <option value="Engenharia Clínica - UV">
+            Engenharia Clínica - UV
+          </option>
+          <option value="Engenharia de Estruturas - Corporativo">
+            Engenharia de Estruturas - Corporativo
+          </option>
+          <option value="EP - Responsabilidade Social">
+            EP - Responsabilidade Social
+          </option>
+          <option value="Equidade SUS">Equidade SUS</option>
+          <option value="Ergometria - UP">Ergometria - UP</option>
+          <option value="Estacionamento - UP">Estacionamento - UP</option>
+          <option value="Estacionamento - UV">Estacionamento - UV</option>
+          <option value="Estudo - Abbvie">Estudo - Abbvie</option>
+          <option value="Estudo - Adaura 2">Estudo - Adaura 2</option>
+          <option value="Estudo - Amplitude">Estudo - Amplitude</option>
+          <option value="Estudo - ATLAS">Estudo - ATLAS</option>
+          <option value="Estudo - AVANZAR">Estudo - AVANZAR</option>
+          <option value="Estudo - Avenue">Estudo - Avenue</option>
+          <option value="Estudo - BO44157 ROCHE">Estudo - BO44157 ROCHE</option>
+          <option value="Estudo - BRAVE">Estudo - BRAVE</option>
+          <option value="Estudo - Breast">Estudo - Breast</option>
+          <option value="Estudo - Bristol - CA209-9LA">
+            Estudo - Bristol - CA209-9LA
+          </option>
+          <option value="Estudo - Capitello">Estudo - Capitello</option>
+          <option value="Estudo - CA20967-T">Estudo - CA20967-T</option>
+          <option value="Estudo - COLT-HF">Estudo - COLT-HF</option>
+          <option value="Estudo - Destiny">Estudo - Destiny</option>
+          <option value="Estudo - Dipro">Estudo - Dipro</option>
+          <option value="Estudo - EMBER 4">Estudo - EMBER 4</option>
+          <option value="Estudo - FIBRONEER - BI IPF 1305-0023 ILD">
+            Estudo - FIBRONEER - BI IPF 1305-0023 ILD
+          </option>
+          <option value="Estudo - FIBRONEER - BI PF 1305-0014 IPF">
+            Estudo - FIBRONEER - BI PF 1305-0014 IPF
+          </option>
+          <option value="Estudo - INSMED - INS1007-301">
+            Estudo - INSMED - INS1007-301
+          </option>
+          <option value="Estudo - LACOG 1918 SA">Estudo - LACOG 1918 SA</option>
+          <option value="Estudo - NeoAdaura">Estudo - NeoAdaura</option>
+          <option value="Estudo - OCEANIC">Estudo - OCEANIC</option>
+          <option value="Estudo - Oreios">Estudo - Oreios</option>
+          <option value="Estudo - PACIFIC-9">Estudo - PACIFIC-9</option>
+          <option value="Estudo - Paloma 2">Estudo - Paloma 2</option>
+          <option value="Estudo - Pós Covid">Estudo - Pós Covid</option>
+          <option value="Estudo - PRIMORDIUM">Estudo - PRIMORDIUM</option>
+          <option value="Estudo - PSA/PSO - Novartis">
+            Estudo - PSA/PSO - Novartis
+          </option>
+          <option value="Estudo - SAMETA">Estudo - SAMETA</option>
+          <option value="Estudo - SCRIPTOR">Estudo - SCRIPTOR</option>
+          <option value="Estudo Syneos - CA209-7DX">
+            Estudo Syneos - CA209-7DX
+          </option>
+          <option value="Estudo - Tassos">Estudo - Tassos</option>
+          <option value="Estudo - Titania">Estudo - Titania</option>
+          <option value="Estudo - VICTORIUM">Estudo - VICTORIUM</option>
+          <option value="Estudo - Volga">Estudo - Volga</option>
+          <option value="Estudo - Wayfind">Estudo - Wayfind</option>
+          <option value="Estudo - Wrapsody">Estudo - Wrapsody</option>
+          <option value="Estudo Astra - Aegean">Estudo Astra - Aegean</option>
+          <option value="Estudo Astra - Destiny">Estudo Astra - Destiny</option>
+          <option value="Estudo Astra - Hudson">Estudo Astra - Hudson</option>
+          <option value="Estudo Astra - Interlink">
+            Estudo Astra - Interlink
+          </option>
+          <option value="Estudo Astra - Neoadaura">
+            Estudo Astra - Neoadaura
+          </option>
+          <option value="Estudo Astra - Niagara">Estudo Astra - Niagara</option>
+          <option value="Estudo Astra - Nile">Estudo Astra - Nile</option>
+          <option value="Estudo Astra - Sameta">Estudo Astra - Sameta</option>
+          <option value="Estudo Astra - Volga">Estudo Astra - Volga</option>
+          <option value="Estudo Azidus - Eom">Estudo Azidus - Eom</option>
+          <option value="Estudo Azidus - Hope">Estudo Azidus - Hope</option>
+          <option value="Estudo Blau - Eritromax">
+            Estudo Blau - Eritromax
+          </option>
+          <option value="Estudo Bristol - CA209-9ER">
+            Estudo Bristol - CA209-9ER
+          </option>
+          <option value="Estudo Clear">Estudo Clear</option>
+          <option value="Estudo Clear Moderado">Estudo Clear Moderado</option>
+          <option value="Estudo EMS - Berlim">Estudo EMS - Berlim</option>
+          <option value="Estudo EMS - Florence">Estudo EMS - Florence</option>
+          <option value="Estudo Enanta - EDP 937 103">
+            Estudo Enanta - EDP 937 103
+          </option>
+          <option value="Estudo Fribogen">Estudo Fribogen</option>
+          <option value="Estudo HAOC - Broadnet">Estudo HAOC - Broadnet</option>
+          <option value="Estudo Hcor - Epsepse">Estudo Hcor - Epsepse</option>
+          <option value="Estudo ICF - PPES 007/17">
+            Estudo ICF - PPES 007/17
+          </option>
+          <option value="Estudo IMVigor">Estudo IMVigor</option>
+          <option value="Estudo Intrabeam - INTRAGO II">
+            Estudo Intrabeam - INTRAGO II
+          </option>
+          <option value="Estudo inVentiv - Talapro">
+            Estudo inVentiv - Talapro
+          </option>
+          <option value="Estudo Ipsen - Napoli 3">
+            Estudo Ipsen - Napoli 3
+          </option>
+          <option value="Estudo IQVIA - Kintor">Estudo IQVIA - Kintor</option>
+          <option value="Estudo ISMMS - Freedom">Estudo ISMMS - Freedom</option>
+          <option value="Estudo Janssen - Magnitude">
+            Estudo Janssen - Magnitude
+          </option>
+          <option value="Estudo Janssen - Mariposa">
+            Estudo Janssen - Mariposa
+          </option>
+          <option value="Estudo Mariposa 2">Estudo Mariposa 2</option>
+          <option value="Estudo Medpace - Cosmic">
+            Estudo Medpace - Cosmic
+          </option>
+          <option value="Estudo Medtronic - Obese DKD">
+            Estudo Medtronic - Obese DKD
+          </option>
+          <option value="Estudo Merck - MS200569">
+            Estudo Merck - MS200569
+          </option>
+          <option value="Estudo Novartis - Edobra">
+            Estudo Novartis - Edobra
+          </option>
+          <option value="Estudo Novartis - To Be Real">
+            Estudo Novartis - To Be Real
+          </option>
+          <option value="Estudo PFizer - C4671006">
+            Estudo PFizer - C4671006
+          </option>
+          <option value="Estudo Pfizer - Grant">Estudo Pfizer - Grant</option>
+          <option value="Estudo PHRI - GCHF">Estudo PHRI - GCHF</option>
+          <option value="Estudo PHRI - Interbleed">
+            Estudo PHRI - Interbleed
+          </option>
+          <option value="Estudo PHRI - Invictus">Estudo PHRI - Invictus</option>
+          <option value="Estudo PHRI - Pure">Estudo PHRI - Pure</option>
+          <option value="Estudo PHRI - Radical">Estudo PHRI - Radical</option>
+          <option value="Estudo PHRI - Scholar">Estudo PHRI - Scholar</option>
+          <option value="Estudo PPD - GA42469">Estudo PPD - GA42469</option>
+          <option value="Estudo PPD - Gilead">Estudo PPD - Gilead</option>
+          <option value="Estudo PTC - PTC299">Estudo PTC - PTC299</option>
+          <option value="Estudo Roche - BO42843">Estudo Roche - BO42843</option>
+          <option value="Estudo Roche - Celestimo">
+            Estudo Roche - Celestimo
+          </option>
+          <option value="Estudo Roche - Imbrave">Estudo Roche - Imbrave</option>
+          <option value="Estudo Roche - Immotion">
+            Estudo Roche - Immotion
+          </option>
+          <option value="Estudo Roche - WAYFIND">Estudo Roche - WAYFIND</option>
+          <option value="Estudo ROR APD811">Estudo ROR APD811</option>
+          <option value="Estudo Sanofi - CARMEN">Estudo Sanofi - CARMEN</option>
+          <option value="Estudo Syneos - Debio">Estudo Syneos - Debio</option>
+          <option value="Eventos">Eventos</option>
+          <option value="Farmácia - Corporativo">Farmácia - Corporativo</option>
+          <option value="Farmácia - UP">Farmácia - UP</option>
+          <option value="Farmácia - UV">Farmácia - UV</option>
+          <option value="Faturamento">Faturamento</option>
+          <option value="Fisioterapia - Corporativo">
+            Fisioterapia - Corporativo
+          </option>
+          <option value="Fluxo Paciente Internado - UP">
+            Fluxo Paciente Internado - UP
+          </option>
+          <option value="Fortalece Redes">Fortalece Redes</option>
+          <option value="Fortaleceses">Fortaleceses</option>
+          <option value="Gerência Administrativa - UV">
+            Gerência Administrativa - UV
+          </option>
+          <option value="Gerência Assistencial - UV">
+            Gerência Assistencial - UV
+          </option>
+          <option value="Gerência Internados - UP">
+            Gerência Internados - UP
+          </option>
+          <option value="Gerência Médica - UV">Gerência Médica - UV</option>
+          <option value="Gerencias Assistenciais Corporativa">
+            Gerencias Assistenciais Corporativa
+          </option>
+          <option value="Gestão de Contas">Gestão de Contas</option>
+          <option value="Gestão de Glosa">Gestão de Glosa</option>
+          <option value="Gestão de Saúde Populacional">
+            Gestão de Saúde Populacional
+          </option>
+          <option value="Graduação">Graduação</option>
+          <option value="HAOC INSTITUCIONAL">HAOC INSTITUCIONAL</option>
+          <option value="Hemodiálise - UP">Hemodiálise - UP</option>
+          <option value="Hemodiálise - UV">Hemodiálise - UV</option>
+          <option value="Hemodinâmica/ Angiografia  - UP">
+            Hemodinâmica/ Angiografia - UP
+          </option>
+          <option value="Holter - UP">Holter - UP</option>
+          <option value="Hospital Evaldo Foz">Hospital Evaldo Foz</option>
+          <option value="Hotelaria - UV">Hotelaria - UV</option>
+          <option value="Imóvel São José">Imóvel São José</option>
+          <option value="Informações Gerenciais">Informações Gerenciais</option>
+          <option value="Inovação em Saúde">Inovação em Saúde</option>
+          <option value="Instituto da Próstata - UP">
+            Instituto da Próstata - UP
+          </option>
+          <option value="Instituto do Colon">Instituto do Colon</option>
+          <option value="Instituto Social Hospital Alemão Oswaldo Cruz">
+            Instituto Social Hospital Alemão Oswaldo Cruz
+          </option>
+          <option value="Integravisa">Integravisa</option>
+          <option value="Inteligência Hospitalar">
+            Inteligência Hospitalar
+          </option>
+          <option value="Jardinagem / Dedetização - UP">
+            Jardinagem / Dedetização - UP
+          </option>
+          <option value="Laboratório - Análises Clínicas - UP">
+            Laboratório - Análises Clínicas - UP
+          </option>
+          <option value="Laboratório - Analises Clínicas - UV">
+            Laboratório - Analises Clínicas - UV
+          </option>
+          <option value="Laboratório de Pesquisa Experimental">
+            Laboratório de Pesquisa Experimental
+          </option>
+          <option value="Mamografia - UP">Mamografia - UP</option>
+          <option value="Mamografia - UV">Mamografia - UV</option>
+          <option value="Manutenção - UP">Manutenção - UP</option>
+          <option value="Manutenção Geral - UV">Manutenção Geral - UV</option>
+          <option value="MAPA - UP">MAPA - UP</option>
+          <option value="Medicina Nuclear - UP">Medicina Nuclear - UP</option>
+          <option value="Meio Ambiente">Meio Ambiente</option>
+          <option value="NE Heliponto - UP">NE Heliponto - UP</option>
+          <option value="Nutrição - Corporativo">Nutrição - Corporativo</option>
+          <option value="Nutrição - UP">Nutrição - UP</option>
+          <option value="Nutrição Colaboradores - UV">
+            Nutrição Colaboradores - UV
+          </option>
+          <option value="Nutrição Enteral - UP">Nutrição Enteral - UP</option>
+          <option value="Nutrição Paciente / Clínica - UV">
+            Nutrição Paciente / Clínica - UV
+          </option>
+          <option value="Nutrição Paciente - UP">Nutrição Paciente - UP</option>
+          <option value="Nutrição Parenteral">Nutrição Parenteral</option>
+          <option value="Operações Financeiras">Operações Financeiras</option>
+          <option value="Orçamento Particular">Orçamento Particular</option>
+          <option value="Ortopedia ( Orto ) - UP">
+            Ortopedia ( Orto ) - UP
+          </option>
+          <option value="Ouvidoria">Ouvidoria</option>
+          <option value="Ouvidoria - UV">Ouvidoria - UV</option>
+          <option value="P.A.B.X.">P.A.B.X.</option>
+          <option value="Pac-s - UP">Pac-s - UP</option>
+          <option value="Parceria Senac">Parceria Senac</option>
+          <option value="Pastoral">Pastoral</option>
+          <option value="Patologia - CICAP - UP">Patologia - CICAP - UP</option>
+          <option value="PCDT">PCDT</option>
+          <option value="PET CT - UP">PET CT - UP</option>
+          <option value="Planejamento Radioterápico - UP">
+            Planejamento Radioterápico - UP
+          </option>
+          <option value="Polissonografia - UP">Polissonografia - UP</option>
+          <option value="Pós-Graduação">Pós-Graduação</option>
+          <option value="Posto Bancário - UP">Posto Bancário - UP</option>
+          <option value="Praça Amadeu Amaral - UP">
+            Praça Amadeu Amaral - UP
+          </option>
+          <option value="Práticas e Modelo Assistencial">
+            Práticas e Modelo Assistencial
+          </option>
+          <option value="Práticas Médicas">Práticas Médicas</option>
+          <option value="Pré- faturamento externo">
+            Pré- faturamento externo
+          </option>
+          <option value="Presidência (Conselho)">Presidência (Conselho)</option>
+          <option value="Prevenção e Combate a Incêndio - Corporativo">
+            Prevenção e Combate a Incêndio - Corporativo
+          </option>
+          <option value="Prevenção e Combate a Incêndio - UP">
+            Prevenção e Combate a Incêndio - UP
+          </option>
+          <option value="Prisma">Prisma</option>
+          <option value="Procedimentos Realizados na Unidade Paulista - UV">
+            Procedimentos Realizados na Unidade Paulista - UV
+          </option>
+          <option value="Procedimentos Realizados na Unidade Vergueiro - UP">
+            Procedimentos Realizados na Unidade Vergueiro - UP
+          </option>
+          <option value="Processo de Contas - UV">
+            Processo de Contas - UV
+          </option>
+          <option value="Produtos e Precificação">
+            Produtos e Precificação
+          </option>
+          <option value="Projeto Assistencial Supervisão">
+            Projeto Assistencial Supervisão
+          </option>
+          <option value="Projeto CDC - JHPIEGO">Projeto CDC - JHPIEGO</option>
+          <option value="Projeto de certificação APS">
+            Projeto de certificação APS
+          </option>
+          <option value="Pronto Atendimento - UP">
+            Pronto Atendimento - UP
+          </option>
+          <option value="Pronto Atendimento - UV">
+            Pronto Atendimento - UV
+          </option>
+          <option value="Provisões / Outros Resultados - Corporativo">
+            Provisões / Outros Resultados - Corporativo
+          </option>
+          <option value="Provisões - Outros Resultados - GSP">
+            Provisões - Outros Resultados - GSP
+          </option>
+          <option value="Provisões - Outros Resultados - IPE">
+            Provisões - Outros Resultados - IPE
+          </option>
+          <option value="Provisões / Outros Resultados - UP">
+            Provisões / Outros Resultados - UP
+          </option>
+          <option value="Provisões/ Outros Resultados - CB">
+            Provisões/ Outros Resultados - CB
+          </option>
+          <option value="Provisões/ Outros Resultados - UV">
+            Provisões/ Outros Resultados - UV
+          </option>
+          <option value="Quimioterapia - UP">Quimioterapia - UP</option>
+          <option value="Quimioterapia - UV">Quimioterapia - UV</option>
+          <option value="Raio - X - UP">Raio - X - UP</option>
+          <option value="Raio X - UV">Raio X - UV</option>
+          <option value="REAB - Pós Cuidados Intensivos">
+            REAB - Pós Cuidados Intensivos
+          </option>
+          <option value="Recepta">Recepta</option>
+          <option value="Recrutamento e Seleção">Recrutamento e Seleção</option>
+          <option value="Recuperacao Pós Anestésica - UP">
+            Recuperacao Pós Anestésica - UP
+          </option>
+          <option value="Recursos Humanos">Recursos Humanos</option>
+          <option value="Regras de Negócios">Regras de Negócios</option>
+          <option value="Relacionamento Médico">Relacionamento Médico</option>
+          <option value="Relações com o Mercado">Relações com o Mercado</option>
+          <option value="Remuneração e Benefícios">
+            Remuneração e Benefícios
+          </option>
+          <option value="ReNaDe">ReNaDe</option>
+          <option value="Repasse Médico">Repasse Médico</option>
+          <option value="Ressonância Magnética - UP">
+            Ressonância Magnética - UP
+          </option>
+          <option value="Ressonância Magnética - UV">
+            Ressonância Magnética - UV
+          </option>
+          <option value="Restaurante dos Médicos - UP">
+            Restaurante dos Médicos - UP
+          </option>
+          <option value="Restaurante dos Visitantes - UP">
+            Restaurante dos Visitantes - UP
+          </option>
+          <option value="RHP">RHP</option>
+          <option value="Rouparia - UP">Rouparia - UP</option>
+          <option value="Saúde Digital">Saúde Digital</option>
+          <option value="Saúde e Segurança">Saúde e Segurança</option>
+          <option value="Saúde em Nossas Mãos">Saúde em Nossas Mãos</option>
+          <option value="Saúde Integral A. C. Camargo - UV">
+            Saúde Integral A. C. Camargo - UV
+          </option>
+          <option value="Saúde Integral Klabin - UV">
+            Saúde Integral Klabin - UV
+          </option>
+          <option value="Saúde Integral SIEMENS Energy Jundiaí">
+            Saúde Integral SIEMENS Energy Jundiaí
+          </option>
+          <option value="Saúde Integral Volkswagen">
+            Saúde Integral Volkswagen
+          </option>
+          <option value="Saúde Redes">Saúde Redes</option>
+          <option value="Secretaria Executiva">Secretaria Executiva</option>
+          <option value="Segurança - UP">Segurança - UP</option>
+          <option value="Segurança da Informação">
+            Segurança da Informação
+          </option>
+          <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+          <option value="Serv. Controle Infecção Hospitalar">
+            Serv. Controle Infecção Hospitalar
+          </option>
+          <option value="Serv.Gerenc.Residuo Sólidos de Saúde - UP">
+            Serv.Gerenc.Residuo Sólidos de Saúde - UP
+          </option>
+          <option value="Serviço de Controle de Infecção Hospitalar - UV">
+            Serviço de Controle de Infecção Hospitalar - UV
+          </option>
+          <option value="Serviço de Higiene Hospitalar - UP">
+            Serviço de Higiene Hospitalar - UP
+          </option>
+          <option value="Serviço Médico de Anestesia - SMA">
+            Serviço Médico de Anestesia - SMA
+          </option>
+          <option value="Serviço Social">Serviço Social</option>
+          <option value="Sistema de Aquecimento de Água">
+            Sistema de Aquecimento de Água
+          </option>
+          <option value="Sistema de Ar Condicionado e Ventilação">
+            Sistema de Ar Condicionado e Ventilação
+          </option>
+          <option value="Sistema de Bomba de Vácuo">
+            Sistema de Bomba de Vácuo
+          </option>
+          <option value="Sistema de Compressores">
+            Sistema de Compressores
+          </option>
+          <option value="Sistema de Elevadores">Sistema de Elevadores</option>
+          <option value="Sistema de Geração de Emergência">
+            Sistema de Geração de Emergência
+          </option>
+          <option value="Sistema de Geracao de Vapor ">
+            Sistema de Geracao de Vapor
+          </option>
+          <option value="Sistema de Poco Artesiano">
+            Sistema de Poco Artesiano
+          </option>
+          <option value="SPP - Prontuários de Paciente">
+            SPP - Prontuários de Paciente
+          </option>
+          <option value="Subestação de Transformação">
+            Subestação de Transformação
+          </option>
+          <option value="Tecnologia - Infraestrutura de TI">
+            Tecnologia - Infraestrutura de TI
+          </option>
+          <option value="TeleNordeste">TeleNordeste</option>
+          <option value="TeleUTI">TeleUTI</option>
+          <option value="Térreo - Recepção - 1.126.56 m2 (25 vagas)">
+            Térreo - Recepção - 1.126.56 m2 (25 vagas)
+          </option>
+          <option value="Tesouraria - UP">Tesouraria - UP</option>
+          <option value="Tesouraria UV">Tesouraria UV</option>
+          <option value="Tilt Test - UP">Tilt Test - UP</option>
+          <option value="Tomografia - UP">Tomografia - UP</option>
+          <option value="Tomografia - UV">Tomografia - UV</option>
+          <option value="Transformação Digital">Transformação Digital</option>
+          <option value="U.Cincinato CIAMA - Instituto da Mama">
+            U.Cincinato CIAMA - Instituto da Mama
+          </option>
+          <option value="Ultrassonografia - UP">Ultrassonografia - UP</option>
+          <option value="Ultrassonografia - UV">Ultrassonografia - UV</option>
+          <option value="Unid. Móvel Mamografia">Unid. Móvel Mamografia</option>
+          <option value="Unidade de Terapia Intensiva - UV">
+            Unidade de Terapia Intensiva - UV
+          </option>
+          <option value="Unidade 13 de Maio">Unidade 13 de Maio</option>
+          <option value="Unidades de Internação - UP">
+            Unidades de Internação - UP
+          </option>
+          <option value="Unidades Enfermaria - UV">
+            Unidades Enfermaria - UV
+          </option>
+          <option value="Unidades Privativas - UV">
+            Unidades Privativas - UV
+          </option>
+          <option value="U.T.I. - UP">U.T.I. - UP</option>
+          <option value="Velório - UP">Velório - UP</option>
+          <option value="Voluntariado">Voluntariado</option>
+          <option value="1° andar - Ambulatórios - 659.54 m2">
+            1° andar - Ambulatórios - 659.54 m2
+          </option>
+          <option
+            value="1º 2º 3º 4º 5º Subsolo - Estacionamento - 6.192.9 m2 (233 vagas)"
+          >
+            1º 2º 3º 4º 5º Subsolo - Estacionamento - 6.192.9 m2 (233 vagas)
+          </option>
+          <option value="2° andar - Ambulatórios - 659.54 m2">
+            2° andar - Ambulatórios - 659.54 m2
+          </option>
+          <option value="3° andar - Consultórios - 659.54 m2">
+            3° andar - Consultórios - 659.54 m2
+          </option>
+          <option value="4° andar - Ambulatórios - 659.54 m2">
+            4° andar - Ambulatórios - 659.54 m2
+          </option>
+          <option value="5° andar - Ambulatórios - 659.54 m2">
+            5° andar - Ambulatórios - 659.54 m2
+          </option>
+          <option value="6° andar - Ambulatórios - 659.54 m2">
+            6° andar - Ambulatórios - 659.54 m2
+          </option>
+          <option value="7° andar - Ambulatórios - 659.54 m2">
+            7° andar - Ambulatórios - 659.54 m2
+          </option>
+          <option value="8° andar - Ambulatórios - 659.54 m2">
+            8° andar - Ambulatórios - 659.54 m2
+          </option></select
+        ><br />
+
+        <label for="patrimonio">Patrimônio:</label>
+        <input type="text" id="patrimonio" name="patrimonio" /><br />
+
+        <label for="motivo">*Motivo:</label>
+        <textarea
+          id="motivo"
+          name="motivo"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br />
+
+        <label for="chamado">*Chamado:</label>
+        <input type="text" id="chamado" name="chamado" required /><br />
+      </div>
+
+      <div id="itens"></div>
+
+      <br /><button type="button" id="adicionarItens">
+        Adicionar mais itens</button
+      ><br />
+
+      <br /><input
+        type="submit"
+        id="enviar"
+        onclick="AdicionaRespostaNaDiv(event)"
+      />
+    </form>
+
+    <div id="resultado">
+      <div id="texto1"></div>
+      <div id="tabela1"></div>
+      <div id="tabela2"></div>
+      <div id="texto2"></div>
+    </div>
+
+    <button id="botaoCopiar" class="escondido">Copiar</button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
